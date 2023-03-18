@@ -99,7 +99,7 @@ const CreatePost = () => {
                     onChange={(e) => setFile(e.target.files[0])}
                 />
                 <InputTextField onChange={(e) => handleChange(e)} name='title' placeholder="Title" />
-                <Button onClick={() => savePost()} variant="contained" color="primary">Publish</Button>
+                <InputTextField onChange={(e) => handleChange(e)} name='tags' placeholder="Tags - #movie #travel #sports #tech #fashion"/>
             </StyledFormControl>
             <Textarea
                 rowsMin={5}
@@ -107,6 +107,7 @@ const CreatePost = () => {
                 name='description'
                 onChange={(e) => handleChange(e)} 
             />
+            <Button style={{ position: "absolute" , left: "50%", transform: "translate(-45%, -0%)"}} onClick={() => savePost()} variant="contained" color="primary">Publish</Button>
         </Container>
     )
 }
